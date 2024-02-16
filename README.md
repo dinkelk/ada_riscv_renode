@@ -2,7 +2,7 @@
 
 This little example runs an Ada "blinky" program cross compiled for the RISC-V and runs it on an emulated core using [Renode](https://renode.readthedocs.io/en/latest/index.html).
 
-### How to Compile and Run
+## How to Compile and Run
 
 This demo is compiled and run in a Docker container.
 
