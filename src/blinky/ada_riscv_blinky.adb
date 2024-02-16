@@ -1,7 +1,7 @@
 with Interfaces; use Interfaces;
 with System.Storage_Elements; use System.Storage_Elements;
 
-procedure Ada_Riscv_Renode is
+procedure Ada_Riscv_Blinky is
    Led : Interfaces.Unsigned_32
       with Import, Convention => Ada, Address => To_Address (16#60000800#),
            Volatile => True;
@@ -21,4 +21,4 @@ begin
       Led := Led xor Led_Toggle;
       Sleep;
    end loop;
-end Ada_Riscv_Renode;
+end Ada_Riscv_Blinky;

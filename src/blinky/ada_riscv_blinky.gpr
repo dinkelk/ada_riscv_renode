@@ -1,0 +1,8 @@
+project Ada_Riscv_Blinky extends all "../../ada_riscv_renode.gpr" is
+
+   for Source_Dirs use (".");
+   for Object_Dir use ada_riscv_renode.OBJECT_DIR;
+   for Exec_Dir use ada_riscv_renode.EXEC_DIR;
+   for Main use ("ada_riscv_blinky.adb");
+
+end Ada_Riscv_Blinky;
