@@ -21,6 +21,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteract
     build-essential \
     wget \
     ca-certificates \
+    netcat \
     && DEBIAN_FRONTEND=noninteractive apt-get -yq clean
 
 # ensure we have the en_US.UTF-8 locale available

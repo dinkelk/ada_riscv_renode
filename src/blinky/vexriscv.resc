@@ -7,7 +7,7 @@ using sysbus
 mach create $name
 machine LoadPlatformDescription @vexriscv.repl
 
-sysbus LoadELF @../bin/ada_riscv_renode
+sysbus LoadELF @bin/ada_riscv_blinky
 
 machine StartGdbServer 3333
 logLevel -1 sysbus.gpio_out.led0

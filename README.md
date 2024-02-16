@@ -32,7 +32,7 @@ This demo is compiled and run in a Docker container.
 
   ```
   $ cd ~/ada_riscv_renode
-  $ renode vexriscv.resc
+  $ renode src/blinky/vexriscv.resc
   17:39:02.4980 [WARNING] Couldn't start UI - falling back to console mode
   17:39:02.9129 [INFO] Loaded monitor commands from: /opt/renode/scripts/monitor.py
   Renode, version 1.14.0.29506 (81da46c1-202308081623)

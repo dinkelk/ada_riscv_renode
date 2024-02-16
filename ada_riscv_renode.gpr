@@ -5,12 +5,17 @@ abstract project Ada_Riscv_Renode extends all "config/ada_riscv_renode_config.gp
    EXEC_DIR := "bin";
    for Create_Missing_Dirs use "True";
 
-   for Languages use ("Ada", "Asm");
+   for Languages use ("Ada", "Asm", "C");
    for Target use "riscv64-elf";
    for Runtime ("Ada") use "light-rv32i";
 
    package Compiler is
-      for Default_Switches ("Ada") use Ada_Riscv_Renode_Config.Ada_Compiler_Switches;
+      for Default_Switches ("Ada") use Ada_Riscv_Renode_Config.Ada_Compiler_Switches &
+        ("-march=rv32i_zicsr", "-mabi=ilp32");
+      for Default_Switches ("Asm") use
+        ("-march=rv32i_zicsr", "-mabi=ilp32");
+      for Default_Switches ("C") use
+        ("-march=rv32i_zicsr", "-mabi=ilp32");
    end Compiler;
 
    package Binder is
