@@ -6,7 +6,7 @@ authors = ["Kevin Dinkel"]
 maintainers = ["Kevin Dinkel <1225857+dinkelk@users.noreply.github.com>"]
 maintainers-logins = ["dinkelk"]
 
-project-files = ["src/blinky/ada_riscv_blinky.gpr", "src/uart/ada_riscv_uart.gpr"]
+project-files = ["src/blinky/ada_riscv_blinky.gpr", "src/uart/ada_riscv_uart.gpr", "src/sqrt/ada_riscv_sqrt.gpr"]
 
 [[depends-on]]
 gnat_riscv64_elf = "^13.2.1" 

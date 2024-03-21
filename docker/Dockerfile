@@ -76,5 +76,11 @@ RUN wget https://github.com/renode/renode/releases/download/v${RENODE_VERSION}/r
     rm -rf /var/lib/apt/lists/*
 RUN pip3 install -r /opt/renode/tests/requirements.txt --no-cache-dir
 
+# For gdb
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+    && DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:deadsnakes/ppa -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get -yq install libpython3.8-dev \
+    && DEBIAN_FRONTEND=noninteractive apt-get -yq clean
+
 # Make sure user is root at end.
 USER root

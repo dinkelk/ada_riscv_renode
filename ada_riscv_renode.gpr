@@ -11,7 +11,7 @@ abstract project Ada_Riscv_Renode extends all "config/ada_riscv_renode_config.gp
 
    package Compiler is
       for Default_Switches ("Ada") use Ada_Riscv_Renode_Config.Ada_Compiler_Switches &
-        ("-march=rv32i_zicsr", "-mabi=ilp32");
+        ("-march=rv32i_zicsr", "-mabi=ilp32", "-O0");
       for Default_Switches ("Asm") use
         ("-march=rv32i_zicsr", "-mabi=ilp32");
       for Default_Switches ("C") use
